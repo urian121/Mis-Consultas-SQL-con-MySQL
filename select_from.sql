@@ -1,0 +1,1 @@
+SELECT fotocars.*, carros.* FROM carros, fotocars  WHERE carros.id=fotocars.carro_id AND carros.id='12'
