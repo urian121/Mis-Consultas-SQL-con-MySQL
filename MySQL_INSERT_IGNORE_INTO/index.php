@@ -7,7 +7,7 @@ if(isset($_POST['submit'])){
     $con = mysqli_connect($servidor, $usuario, $password) or die("No se ha podido conectar al Servidor");
     $db = mysqli_select_db($con, $basededatos) or die("Upps! Error en conectar a la Base de Datos");
 
-    $SqlInsert = ("INSERT INTO empleados(nombre, cedula, correo)
+    $SqlInsert = ("INSERT IGNORE INTO empleados(nombre, cedula, correo)
                     VALUES('{$_POST['nombre']}','{$_POST['cedula']}','{$_POST['correo']}')");
     $resulInsert = mysqli_query($con, $SqlInsert);
     echo '<pre><center>';
