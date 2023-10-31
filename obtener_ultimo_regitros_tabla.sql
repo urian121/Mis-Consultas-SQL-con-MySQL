@@ -1,3 +1,5 @@
+-- Max() y Min() son funciones en sql, que nos permiten obtener el maximo o minimo valor de una columna en nuestra tabla.
+
 -- Opción 1
 SELECT MAX(id) AS ultimo_id
 FROM consignaciones;
