@@ -4,10 +4,9 @@
         use sala_chat;
 -- OBTENER EL PRIMER REGISTRO DE UNA TABLA
 SELECT MIN(id_user) As primer_registro FROM tbl_users;
-SELECT id_user FROM tbl_users ORDER BY id_user ASC;
 SELECT id_user FROM tbl_users ORDER BY id_user ASC LIMIT 1;
 
--- Obener el segundo registro de una tabla
+-- OBTENER EL SEGUNDO REGISTRO DE UNA TABLA
 SELECT * FROM tbl_users LIMIT 1, 1;
 SELECT * FROM tbl_usersLIMIT 1, 2;
 /*
