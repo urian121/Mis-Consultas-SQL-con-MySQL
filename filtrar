@@ -1,0 +1,72 @@
+ # Para obtener los IDs de tbl_empleados que no están en tbl_mensajeros
+
+SELECT id
+  FROM tbl_empleados
+WHERE id NOT IN (SELECT empleado_id FROM tbl_mensajeros);
+
+
+SELECT e.id
+  FROM tbl_empleados e
+  LEFT JOIN tbl_mensajeros m ON e.id = m.empleado_id
+WHERE m.empleado_id IS NULL;
+
+
+select id from tbl_empleados;
++----+
+| id |
++----+
+| 27 |
+| 11 |
+| 21 |
+| 31 |
+| 19 |
+| 23 |
+| 14 |
+| 15 |
+| 13 |
+| 12 |
+| 29 |
+| 20 |
+| 17 |
+| 18 |
+| 30 |
+|  5 |
+| 22 |
+|  7 |
+|  1 |
+|  2 |
+|  3 |
+|  6 |
+|  4 |
+| 26 |
+| 25 |
+| 16 |
+| 24 |
+
+
+select empleado_id from tbl_mensajeros;
++-------------+
+| empleado_id |
++-------------+
+|           1 |
+|          11 |
+|          12 |
+|          13 |
+|          14 |
+|          15 |
+|          16 |
+|          17 |
+|          18 |
+|          19 |
+|          20 |
+|          21 |
+|          22 |
+|          23 |
+|          24 |
+|          25 |
+|          26 |
+|          27 |
+|          29 |
+|          30 |
+|          31 |
++-------------+
